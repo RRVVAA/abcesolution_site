@@ -1,7 +1,7 @@
 @extends("Site.template")
+
 @section("conteudo")
 @include("Site.cabecalho")
-
 <div class="cadastro processar_cadastro">
 	<div class="conteudo">
 		<div class="rows">			
@@ -12,7 +12,6 @@
 					<p class="text-cinza">Seu cadastro foi concluído.</p>
 					<p class="text-cinza mb-4">Clique no botão abaixo para acessar sua área</p>
 					<a href="" class="btn btn-azul d-inline-block">Acessar minha área</a>
-					
 				</div>		
 			</div>		
 		</div>		

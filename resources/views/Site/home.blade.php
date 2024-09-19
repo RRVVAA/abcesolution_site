@@ -2,7 +2,6 @@
 @section("conteudo")
 @include("Site.cabecalho")
 
-
 <div class="base-banner-top">
 	<div class="rows">
 		<div class="col-6">

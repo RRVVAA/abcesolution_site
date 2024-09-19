@@ -22,7 +22,6 @@
 		<script>
 				var base_url = "{{asset('')}}";
 				var _token   = "{{csrf_token()}}";
-			
 		</script>
 </head>
 
@@ -42,17 +41,11 @@
     
     <a href="" class="suport-whats"></a>
      <script src="https://kit.fontawesome.com/9480317a2f.js"></script>
-    		
-	
+
 	<script src="{{asset('assets/site/js/jquery.mask.js')}}"></script>
-	
 	<script src="{{asset('assets/componentes/js/js_modal.js')}}"></script>
 	<script src="{{asset('assets/componentes/js/js_util.js')}}"></script>
 	<script src="{{asset('assets/componentes/js/js_mascara.js')}}"></script>
-	<script src="{{asset('assets/componentes/js/upload.js')}}"></script> 
-    
-   
-   
-   
+	<script src="{{asset('assets/componentes/js/upload.js')}}"></script>
 </body>
 </html>

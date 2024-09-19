@@ -124,7 +124,8 @@ background:#24292d00;transition:all .4s linear}
 	position:relative;
 }
 .base-banner .conteudo{
-	width:1040px
+	width:1040px;
+	margin-top: 40px;
 }
 .base-banner .conteudo .text-marrom{
 	font-weight:600

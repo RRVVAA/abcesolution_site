@@ -85,7 +85,8 @@
 				@foreach($planos as $plano)
 					@php
 						$usuario = ($plano->plano->limite_usuario==1) ? "01 Usuário" : $plano->plano->limite_usuario . " Usuários" ;
-                        $nota    = ($plano->plano->limite_nfe>0) ? $plano->plano->limite_nfe ." Nota fiscais de produto" :  "Nota fiscal Não permitida" ;
+                        $nfe    = ($plano->plano->limite_nfe > 0) ? $plano->plano->limite_nfe ." NF-e" :  "NF-e Não permitida" ;
+                        $nfce    = ($plano->plano->limite_nfce > 0) ? $plano->plano->limite_nfce ." NFC-e" :  "NFC-e Não permitida" ;
                         $total   = $plano->plano->preco + $plano->plano->valor_setup;
 					@endphp
 					<div class="col d-flex mb-3">
@@ -101,7 +102,12 @@
 							</p>
 							<ul>
 								<li><i class="fas fa-check"></i> {{$usuario}} </li>
-								<li><i class="fas fa-check"></i> {{ ($plano->plano->limite_nfe == -1) ? " NFe Ilimitado " : $nota }}  </li>
+								<li>
+									<i class="fas fa-check"></i> {{ ($plano->limite_nfe == -1) ? " NF-e Ilimitado " : $nfe }}
+								</li>
+								<li>
+									<i class="fas fa-check"></i> {{ ($plano->limite_nfce == -1) ? " NFC-e Ilimitado " : $nfce }}
+								</li>
 								@foreach($plano->plano->modulos as $modulo)
 									<li><i class="fas fa-check"></i> {{ $modulo->nome }} </li>
 								@endforeach

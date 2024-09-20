@@ -15,7 +15,6 @@ class SiteController extends Controller
         $dados["planos"] = PlanoPreco::with(['plano'])
             ->where("recorrencia", 1)
             ->get();
-        dd($dados);
         return view("Site.home", $dados);
     }
 

@@ -8,7 +8,7 @@
                 <div class="rows">
                     <div class="col-4 m-auto text-center d-flex">
                         <div class="caixa border">
-                            <img src="{{asset('assets/site/img/logo-athenas-2.png')}}" width="100">
+                            <img src="{{asset('assets/site/img/logo-login.png')}}" width="225">
                             <h3 class="h3 text-center text-azul mt-4">Cadastre-se</h3>
                             <p class="text-cinza">Preencha os campos ao lado e cadastre-se gratuitamente.</p>
                             <p class="py-4 text-cinza">ou</p>

@@ -84,7 +84,7 @@
 			<div class="rows text-center mt-2">
 				@foreach($planos as $plano)
 					@php
-						$usuario = ($plano->limite_usuario==1) ? "01 Usuário" : $plano->plano->limite_usuario . " Usuários" ;
+						$usuario = ($plano->plano->limite_usuario==1) ? "01 Usuário" : $plano->plano->limite_usuario . " Usuários" ;
                         $nota    = ($plano->plano->limite_nfe>0) ? $plano->plano->limite_nfe ." Nota fiscais de produto" :  "Nota fiscal Não permitida" ;
                         $total   = $plano->plano->preco + $plano->plano->valor_setup;
 					@endphp

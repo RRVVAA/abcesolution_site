@@ -12,13 +12,18 @@ class SiteController extends Controller
 {
     public function index()
     {
-        $dados["planos"] = PlanoPreco::where("recorrencia", 1)->get();
+        $dados["planos"] = PlanoPreco::with(['plano'])
+            ->where("recorrencia", 1)
+            ->get();
+        dd($dados);
         return view("Site.home", $dados);
     }
 
     public function planos()
     {
-        $dados["planos"] = PlanoPreco::where("recorrencia", 1)->get();
+        $dados["planos"] = PlanoPreco::with(['plano'])
+            ->where("recorrencia", 1)
+            ->get();
         $dados["id"] = 1;
         return view("Site.Planos", $dados);
     }

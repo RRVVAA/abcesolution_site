@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Planos</title>
+<title>{{ env('APP_NAME') }}</title>
 	<link href="{{asset('assets/admin/img/ico-athenas.svg')}}" type="image/x-icon" rel="icon" />
 	<link href="{{asset('assets/admin/img/ico-athenas.svg')}}" type="image/x-icon" rel="shortcut icon" />
 	<link href="{{asset('assets/admin/img/ico-athenas.svg')}}" rel="apple-touch-icon" />

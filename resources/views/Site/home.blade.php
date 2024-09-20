@@ -80,43 +80,43 @@
 		<div class="rows rows2 text-center mt-2">		
 			<div class="col-12 text-center pb-3">
 				<span class="d-block text-center h3 text-branco mt-1">Escolha um <span class="text-amarelo">plano ideal</span> para sua empresa</span>
-			</div>
-			<div class="rows text-center mt-2">
-				@foreach($planos as $plano)
-					@php
-						$usuario = ($plano->plano->limite_usuario==1) ? "01 Usuário" : $plano->plano->limite_usuario . " Usuários" ;
-                        $nfe    = ($plano->plano->limite_nfe > 0) ? $plano->plano->limite_nfe ." NF-e" :  "NF-e Não permitida" ;
-                        $nfce    = ($plano->plano->limite_nfce > 0) ? $plano->plano->limite_nfce ." NFC-e" :  "NFC-e Não permitida" ;
-                        $total   = $plano->plano->preco + $plano->plano->valor_setup;
-					@endphp
-					<div class="col d-flex mb-3">
-						<div class="caixa plano1">
-							<strong class="h5 d-block mb-1 text-uppercase">{{$plano->plano->nome}}</strong>
+				<div class="rows text-center mt-2">
+					@foreach($planos as $plano)
+						@php
+							$usuario = ($plano->plano->limite_usuario==1) ? "01 Usuário" : $plano->plano->limite_usuario . " Usuários" ;
+							$nfe    = ($plano->plano->limite_nfe > 0) ? $plano->plano->limite_nfe ." NF-e" :  "NF-e Não permitida" ;
+							$nfce    = ($plano->plano->limite_nfce > 0) ? $plano->plano->limite_nfce ." NFC-e" :  "NFC-e Não permitida" ;
+							$total   = $plano->plano->preco + $plano->plano->valor_setup;
+						@endphp
+						<div class="col d-flex mb-3">
+							<div class="caixa plano1">
+								<strong class="h5 d-block mb-1 text-uppercase">{{$plano->plano->nome}}</strong>
 
-							<p class="h5 mb-1 text-vermelho">
-								<strike>De {{$plano->preco_de}}</strike>
-							</p>
-							<p class="h5">
-								<span class="text-escuro">Por apenas</span>
-								<strong class="d-block  h4">R$ {{$plano->preco}}</strong>
-							</p>
-							<ul>
-								<li><i class="fas fa-check"></i> {{$usuario}} </li>
-								<li>
-									<i class="fas fa-check"></i> {{ ($plano->limite_nfe == -1) ? " NF-e Ilimitado " : $nfe }}
-								</li>
-								<li>
-									<i class="fas fa-check"></i> {{ ($plano->limite_nfce == -1) ? " NFC-e Ilimitado " : $nfce }}
-								</li>
-								@foreach($plano->plano->modulos as $modulo)
-									<li><i class="fas fa-check"></i> {{ $modulo->nome }} </li>
-								@endforeach
-							</ul>
-							<a href="{{route('cadastro', $plano->id)}}" class="btn btn-verde d-table m-auto scroll-page" style="position:absolute; bottom: 15px;"><i class="fas fa-arrow-right"></i> Quero testar</a>
+								<p class="h5 mb-1 text-vermelho">
+									<strike>De {{$plano->preco_de}}</strike>
+								</p>
+								<p class="h5">
+									<span class="text-escuro">Por apenas</span>
+									<strong class="d-block  h4">R$ {{$plano->preco}}</strong>
+								</p>
+								<ul>
+									<li><i class="fas fa-check"></i> {{$usuario}} </li>
+									<li>
+										<i class="fas fa-check"></i> {{ ($plano->limite_nfe == -1) ? " NF-e Ilimitado " : $nfe }}
+									</li>
+									<li>
+										<i class="fas fa-check"></i> {{ ($plano->limite_nfce == -1) ? " NFC-e Ilimitado " : $nfce }}
+									</li>
+									@foreach($plano->plano->modulos as $modulo)
+										<li><i class="fas fa-check"></i> {{ $modulo->nome }} </li>
+									@endforeach
+								</ul>
+								<a href="{{route('cadastro', $plano->id)}}" class="btn btn-verde d-table m-auto scroll-page" style="position:absolute; bottom: 15px;"><i class="fas fa-arrow-right"></i> Quero testar</a>
+							</div>
 						</div>
-					</div>
-				@endforeach
-			
+					@endforeach
+
+				</div>
 			</div>
 		</div>
 	</div>

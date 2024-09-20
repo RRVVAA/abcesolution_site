@@ -2,9 +2,9 @@
 <head>
 <meta charset="utf-8">
 <title>{{ env('APP_NAME') }}</title>
-	<link href="{{asset('assets/admin/img/ico-athenas.svg')}}" type="image/x-icon" rel="icon" />
-	<link href="{{asset('assets/admin/img/ico-athenas.svg')}}" type="image/x-icon" rel="shortcut icon" />
-	<link href="{{asset('assets/admin/img/ico-athenas.svg')}}" rel="apple-touch-icon" />
+	<link href="{{asset('assets/site/img/ico-athenas.svg')}}" type="image/x-icon" rel="icon" />
+	<link href="{{asset('assets/site/img/ico-athenas.svg')}}" type="image/x-icon" rel="shortcut icon" />
+	<link href="{{asset('assets/site/img/ico-athenas.ico')}}" rel="apple-touch-icon" />
 
 	<meta name="viewport" content="width=device-width, initial-scale =1">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/auxiliar.css')}}">

@@ -51,7 +51,7 @@
 				<div class="caixa">
 					<i class="icos ico-nota"></i>
 					<span class="d-block h4 text-azul text-center text-uppercase">Nota fiscal</span>
-					<p>Emita notas fiscais com praticidade! Emita NF-e NFS-e NFCE</p>
+					<p>Emita notas fiscais com praticidade! Emita NF-e NFS-e NFC-e</p>
 				</div>
 			</div>
 			

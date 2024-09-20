@@ -114,7 +114,7 @@ background:#24292d00;transition:all .4s linear}
 
 .base-banner{
 	width: 100%;
-    min-height:100vh;
+    /*min-height:100vh;*/
     background:none;
 	background-size:cover;
     color: #fff;

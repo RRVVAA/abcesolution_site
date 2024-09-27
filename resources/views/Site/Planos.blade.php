@@ -29,6 +29,7 @@
                         $usuario = ($plano->plano->limite_usuario==1) ? "01 Usuário" : $plano->plano->limite_usuario . " Usuários" ;
                         $nfe    = ($plano->plano->limite_nfe > 0) ? $plano->plano->limite_nfe ." NF-e" :  "NF-e Não permitida" ;
                         $nfce    = ($plano->plano->limite_nfce > 0) ? $plano->plano->limite_nfce ." NFC-e" :  "NFC-e Não permitida" ;
+                        $pdv    = ($plano->plano->limite_pdv > 0) ? $plano->plano->limite_pdv ." PDV" :  "PDV Não permitido" ;
                         $total   = $plano->preco + $plano->plano->valor_setup;
                     @endphp
                     <div class="col d-flex mb-3">
@@ -55,6 +56,7 @@
                                 </strong>
                             </p>
                             <ul class="mb-5">
+                                <h3>Recursos</h3>
                                 <li><i class="fas fa-check"></i> {{$usuario}} </li>
                                 <li>
                                     <i class="fas fa-check"></i> {{ ($plano->limite_nfe == -1) ? " NF-e Ilimitado " : $nfe }}
@@ -62,6 +64,15 @@
                                 <li>
                                     <i class="fas fa-check"></i> {{ ($plano->limite_nfce == -1) ? " NFC-e Ilimitado " : $nfce }}
                                 </li>
+                                <li>
+                                    <i class="fas fa-check"></i> {{ ($plano->limite_pdv == -1) ? " NFC-e Ilimitado " : $pdv }}
+                                </li>
+
+                                <li>
+                                    <hr class="mb-2">
+                                </li>
+
+                                <h3>Módulos</h3>
                                 @foreach($plano->plano->modulos as $modulo)
                                     <li><i class="fas fa-check"></i> {{ $modulo->nome }} </li>
                                 @endforeach

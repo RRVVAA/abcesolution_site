@@ -101,6 +101,7 @@
 									<strong class="d-block  h4">R$ {{$plano->preco}}</strong>
 								</p>
 								<ul>
+									<h3>Recursos</h3>
 									<li><i class="fas fa-check"></i> {{$usuario}} </li>
 									<li>
 										<i class="fas fa-check"></i> {{ ($plano->limite_nfe == -1) ? " NF-e Ilimitado " : $nfe }}
@@ -111,6 +112,12 @@
 									<li>
 										<i class="fas fa-check"></i> {{ ($plano->limite_pdv == -1) ? " NFC-e Ilimitado " : $pdv }}
 									</li>
+
+									<li>
+										<hr class="mb-2">
+									</li>
+
+									<h3>Módulos</h3>
 									@foreach($plano->plano->modulos as $modulo)
 										<li><i class="fas fa-check"></i> {{ $modulo->nome }} </li>
 									@endforeach
